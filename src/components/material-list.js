@@ -1,4 +1,4 @@
-import {fetchMaterials} from "../material-service";
+import {fetchMaterials} from "../services/material-service";
 import React, {useEffect, useRef, useState} from "react";
 import MaterialCard from "../material-card";
 import NotifyingLoader from "./notifying-loader";
