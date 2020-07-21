@@ -1,0 +1,28 @@
+/**
+ * Performs a GET request to the GeoGebra API.
+ * @param url
+ * @param params
+ * @returns {Promise<any>}
+ */
+function fetcher(url, params) {
+  const query = Object.keys(params)
+    .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
+    .join('&');
+  const suffix = query ? `?${query}` : '';
+
+  return fetch(`https://api.geogebra.org/v1.0${url}${suffix}`).then(r => r.json());
+}
+
+/**
+ * Performs a GET request with parameters fixed for fetching materials.
+ *
+ * See: https://groot.geogebra.org:555/?url=https://groot.geogebra.org:5400/v1.0/openapi#/materials/Materials%5CController%5CMaterialController%3A%3AgetList
+ * @param url
+ * @param type equivalent with `type` parameter of the GET /materials call
+ * @param embed equivalent with `embed` parameter of the GET /materials call
+ * @param limit equivalent with `limit` parameter of the GET /materials call
+ * @returns {Promise<*>}
+ */
+export function fetchMaterials(url, type, embed, limit) {
+  return fetcher(url, {type, embed, limit});
+}
