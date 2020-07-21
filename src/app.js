@@ -1,14 +1,20 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ListView from './pages/list-view';
+import NotFound from "./pages/not-found";
 
 function App() {
   return (
     <div className="w-100 mw8 center pa3 sans-serif">
       <BrowserRouter>
-        <Route path="/" exact>
-          <ListView/>
-        </Route>
+        <Switch>
+          <Route path="/" exact>
+            <ListView/>
+          </Route>
+          <Route>
+            <NotFound/>
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   );

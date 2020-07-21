@@ -17,12 +17,9 @@ function fetcher(url, params) {
  * Performs a GET request with parameters fixed for fetching materials.
  *
  * See: https://groot.geogebra.org:555/?url=https://groot.geogebra.org:5400/v1.0/openapi#/materials/Materials%5CController%5CMaterialController%3A%3AgetList
- * @param url
- * @param type equivalent with `type` parameter of the GET /materials call
- * @param embed equivalent with `embed` parameter of the GET /materials call
- * @param limit equivalent with `limit` parameter of the GET /materials call
+ * @param params equivalent with the parameters of GET /materials call
  * @returns {Promise<*>}
  */
-export function fetchMaterials(url, type, embed, limit) {
-  return fetcher(url, {type, embed, limit});
+export function fetchMaterials(params) {
+  return fetcher('/materials', params);
 }
