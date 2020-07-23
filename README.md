@@ -1,9 +1,11 @@
 # Resource Explorer
 
-This is a small evaluation project that helps us determine the programming skills and style of applicants and also serves as an example of what might await you at our company.
+This is a small evaluation project that helps us determine the programming skills and style of applicants. It also serves as an example of what might await you at our company.
+
+`Notice`: Although this is a front-end task, the actual work will consist of back-end implementation as well.
 
 ## Requirements
-In order to get the source files, you'll need [Git](https://git.io/). Other then that, basically any _not-too-old_ version of [Node](https://nodejs.org) and a _not-too-old_ web browser should be enough.
+In order to get the source files, you'll need [Git](https://git.io/). Other then that, basically a new version of [Node](https://nodejs.org) and an up-to-date web browser.
 
 ## Installation
 First get the source files by running
@@ -11,7 +13,7 @@ First get the source files by running
 $ git clone https://git.geogebra.org/evaluation/resource-explorer
 $ cd resource-explorer
 ```
-then install the dependencies by
+then install the dependencies by running
 ```bash
 $ npm i
 ```
@@ -23,20 +25,22 @@ $ npm start
 
 ## Do the work
 There are two main tasks to do in this evaluation:
-1. a review of an existing feature
-2. the implementation of a new one
+1. A review of an existing feature
+2. The implementation of a new one
 
-For the first task have a look at the already existing resource list (which should open automatically after starting the
-server) and to the code behind it as well. Try to find the problems in the current implementation and note them as part
-of a review message with ideas for the possible fixes (alternatively you can also just fix it in the code right away).
+For the **first task** have a look at the already existing resource list (which should open automatically after starting the
+server) and to the code behind it. Try to find problems in the current implementation and note them as part
+of a review message with ideas for possible fixes. Alternatively you can also fix them in the code right away.
 
-For the second task please implement a "details page" that shows information about a specific resource. This page should
+For the **second task** please implement a "details page" that shows information about a specific resource. This page should
 be available at the `/details/:id` route and should be based on the [`GET /materials/{id}` method](https://groot.geogebra.org:555/?url=https://api.geogebra.org/v1.0/openapi#/materials/Materials%5CController%5CMaterialController%3A%3Aget)
-of the API. On this page the same information should be visible as in the resource list, along with all the contributors, the
-language, the description and all tags (which includes categories, tags and topics).
+of the API. An example of this call is: https://api.geogebra.org/v1.0/materials/p8r4x6zf.
+On the "details page" the same information should be visible as in the resource list, along with all the contributors, the
+language, the description and all the tags (which includes categories, tags and topics).
 
 As a little help, the project is using the following technologies (keep their standards in mind):
 * [React](https://reactjs.org)
+* [React Hooks](https://reactjs.org/docs/hooks-state.html)
 * [React Router](https://reactrouter.com/web)
 * [Tachyons](http://tachyons.io/)
 
