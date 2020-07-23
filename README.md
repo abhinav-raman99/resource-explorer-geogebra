@@ -38,6 +38,8 @@ of the API. An example of this call is: https://api.geogebra.org/v1.0/materials/
 On the "details page" the same information should be visible as in the resource list, along with all the contributors, the
 language, the description and all the tags (which includes categories, tags and topics).
 
+`Notice`: you may find in code the term *material*. It's the same thing as *resource*.
+
 As a little help, the project is using the following technologies (keep their standards in mind):
 * [React](https://reactjs.org)
 * [React Hooks](https://reactjs.org/docs/hooks-state.html)
