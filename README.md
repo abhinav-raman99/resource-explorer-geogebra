@@ -42,8 +42,9 @@ of a review message with ideas for possible fixes. Alternatively, you can fix th
 have to find all the little problems as, again, these tasks are more about **how** you work.
 
 For the **second task** please implement a "details page" that shows information about a specific resource. This page should
-be available at the `/details/{id}` route and should be based on the [`GET /materials/{id}` method](https://groot.geogebra.org:555/?url=https://api.geogebra.org/v1.0/openapi#/materials/Materials%5CController%5CMaterialController%3A%3Aget)
-of the API. An example of this call is: [https://api.geogebra.org/v1.0/materials/p8r4x6zf](https://api.geogebra.org/v1.0/materials/p8r4x6zf.).
+be available at the `/details/{id}` route and should be based on the `GET /materials/{id}` method of the API. 
+An example of this call is: [https://api.geogebra.org/v1.0/materials/p8r4x6zf?scope=extended&embed=tags,contributors](https://api.geogebra.org/v1.0/materials/p8r4x6zf?scope=extended&embed=tags,contributors), 
+but please see our [API's documentation](https://groot.geogebra.org:555/?url=https://api.geogebra.org/v1.0/openapi) for details.
 On the "details page" the same information should be visible as on the resource list (thumbnail, type, name of author and creation date), 
 along with all the names of the contributors, the description and a simple listing of all the tags (which includes 
 categories, tags and topics). How you arrange the page and how you present these values is up to you (and it doesn't really 
