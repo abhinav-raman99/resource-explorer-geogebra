@@ -1,7 +1,7 @@
-import {fetchMaterials} from "../services/material-service";
-import React, {useEffect, useRef, useState} from "react";
-import MaterialCard from "../material-card";
-import NotifyingLoader from "./notifying-loader";
+import { fetchMaterials } from '../services/material-service';
+import React, { useEffect, useRef, useState } from 'react';
+import MaterialCard from '../material-card';
+import NotifyingLoader from './notifying-loader';
 
 export function MaterialList() {
   const [data, setData] = useState([]);
@@ -15,10 +15,9 @@ export function MaterialList() {
       embed: 'creator',
       limit: 12,
       offset: pageIndex * 11,
-    })
-      .then((materials) => {
-        setData((data) => data.concat(materials));
-      });
+    }).then((materials) => {
+      setData((data) => data.concat(materials));
+    });
   }
 
   useEffect(() => {
@@ -26,15 +25,17 @@ export function MaterialList() {
   }, []);
 
   if (!data.length) {
-    return <div>The materials are loading...</div>
+    return <div>The materials are loading...</div>;
   }
 
   return (
     <>
       <ul className="list pl0 cf">
-        {data.map((material) => <MaterialCard key={material.id} material={material}/>)}
+        {data.map((material) => (
+          <MaterialCard key={material.id} material={material} />
+        ))}
       </ul>
-      <NotifyingLoader onEnterViewport={_loadNextBatch}/>
+      <NotifyingLoader onEnterViewport={_loadNextBatch} />
     </>
-  )
+  );
 }

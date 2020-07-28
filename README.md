@@ -5,54 +5,68 @@ This is a small evaluation project that helps us determine the programming skill
 `Notice`: Although this is a front-end task, the actual work will consist of back-end implementation as well.
 
 ## Requirements
+
 In order to get the source files, you'll need [Git](https://git.io/). Other then that, basically a new version of [Node](https://nodejs.org) and an up-to-date web browser.
 
 ## Installation
+
 First get the source files by running
+
 ```bash
 $ git clone https://git.geogebra.org/evaluation/resource-explorer
 $ cd resource-explorer
 ```
+
 then install the dependencies by running
+
 ```bash
 $ npm i
 ```
 
 The development server can be started by running
+
 ```bash
 $ npm start
 ```
 
 ## Do the work
+
 There are two main tasks to do in this evaluation:
+
 1. A review of an existing feature
 2. The implementation of a new one
 
 For the **first task** have a look at the already existing resource list (which should open automatically after starting the
 server) and to the code behind it. Try to find problems in the current implementation and note them as part
-of a review message with ideas for possible fixes. Alternatively you can also fix them in the code right away.
+of a review message with ideas for possible fixes. Alternatively, you can fix them in the code right away. You don't 
+have to find all the little problems as, again, these tasks are more about **how** you work.
 
 For the **second task** please implement a "details page" that shows information about a specific resource. This page should
-be available at the `/details/:id` route and should be based on the [`GET /materials/{id}` method](https://groot.geogebra.org:555/?url=https://api.geogebra.org/v1.0/openapi#/materials/Materials%5CController%5CMaterialController%3A%3Aget)
-of the API. An example of this call is: https://api.geogebra.org/v1.0/materials/p8r4x6zf.
-On the "details page" the same information should be visible as in the resource list, along with all the contributors, the
-language, the description and all the tags (which includes categories, tags and topics).
+be available at the `/details/{id}` route and should be based on the [`GET /materials/{id}` method](https://groot.geogebra.org:555/?url=https://api.geogebra.org/v1.0/openapi#/materials/Materials%5CController%5CMaterialController%3A%3Aget)
+of the API. An example of this call is: [https://api.geogebra.org/v1.0/materials/p8r4x6zf](https://api.geogebra.org/v1.0/materials/p8r4x6zf.).
+On the "details page" the same information should be visible as on the resource list (thumbnail, type, name of author and creation date), 
+along with all the names of the contributors, the description and a simple listing of all the tags (which includes 
+categories, tags and topics). How you arrange the page and how you present these values is up to you (and it doesn't really 
+matter as long as the layout is clean and simple).
 
-`Notice`: you may find in code the term *material*. It's the same thing as *resource*.
+`Notice`: you may find in code the term _material_. It's the same thing as _resource_.
 
 As a little help, the project is using the following technologies (keep their standards in mind):
-* [React](https://reactjs.org)
-* [React Hooks](https://reactjs.org/docs/hooks-state.html)
-* [React Router](https://reactrouter.com/web)
-* [Tachyons](http://tachyons.io/)
 
-These tasks are not only to proof that you can write code that works but rather to see **how** you do it: 
-* how is your code organized
-* if you use patterns properly
-* if you take care of readability/maintainability
-* etc.
+- [React](https://reactjs.org)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React Router](https://reactrouter.com/web)
+- [Tachyons](http://tachyons.io/)
+
+These tasks are not only to proof that you can write code that works but rather to see **how** you do it:
+
+- how is your code organized
+- if you use patterns properly
+- if you take care of readability/maintainability
+- etc.
 
 ## Commit your work
+
 In order to commit your work, please create a patch and send the patch file by email to
 the following address: jobs@geogebra.org
 
@@ -71,7 +85,7 @@ These commands do the following:
 
 1. `git add` adds all file changes to the git index.
 2. `git commit` saves the changes to the local repository.
-3. `git format-patch` creates a patch file for the latest commit (don't forget the `^` 
+3. `git format-patch` creates a patch file for the latest commit (don't forget the `^`
    in the end!).
 
 In this example the file `0001-Solution.patch` would be the file to attach to your

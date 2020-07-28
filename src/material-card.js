@@ -1,25 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function MaterialCard(props) {
-  const {material} = props;
+  const { material } = props;
   return (
     <li className="db w-100 pb4 fl">
       <Link to={`/details/${material.id}`} className="db color-inherit">
         <div className="dib w-20 fl">
-          <img src={material.thumbUrl} alt="Thumbnail of resource" className="w-100"/>
+          <img
+            src={material.thumbUrl}
+            alt="Thumbnail of resource"
+            className="w-100"
+          />
         </div>
         <div className="dib w-80 fl pl2">
           <h3 className="f5 mt0 mb2">{material.title}</h3>
           <div className="mb2">
-            {material.type === 'book' ? 'Book' : 'Worksheet'} by {material.creator.displayname}
+            {material.type === 'book' ? 'Book' : 'Worksheet'} by{' '}
+            {material.creator.displayname}
           </div>
           <div>Created on {_dateToString(material.date_created)}</div>
         </div>
       </Link>
     </li>
-  )
+  );
 }
 MaterialCard.propTypes = {
   material: PropTypes.shape({
@@ -30,7 +35,7 @@ MaterialCard.propTypes = {
     date_created: PropTypes.number.isRequired,
     creator: PropTypes.object.isRequired,
   }).isRequired,
-}
+};
 
 function _dateToString(dateTime) {
   const date = new Date(dateTime * 1000);

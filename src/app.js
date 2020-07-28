@@ -1,7 +1,7 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ListView from './pages/list-view';
-import NotFound from "./pages/not-found";
+import NotFound from './pages/not-found';
 
 function App() {
   return (
@@ -9,10 +9,10 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
-            <ListView/>
+            <ListView />
           </Route>
           <Route>
-            <NotFound/>
+            <NotFound />
           </Route>
         </Switch>
       </BrowserRouter>
