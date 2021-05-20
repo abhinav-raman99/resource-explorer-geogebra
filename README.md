@@ -2,7 +2,7 @@
 
 This is a small evaluation project that helps us determine the programming skills and style of applicants. It also serves as an example of what might await you at our company.
 
-`Notice`: Although this is a front-end task, the actual work will consist of back-end implementation as well.
+Although this is a front-end task, the actual work will consist of back-end implementation as well. Please answer the theoretical questions about API-design at the bottom!
 
 ## Requirements
 
