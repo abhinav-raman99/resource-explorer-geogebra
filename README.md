@@ -31,10 +31,11 @@ $ npm start
 
 ## Do the work
 
-There are two main tasks to do in this evaluation:
+There are three main tasks to do in this evaluation:
 
 1. A review of an existing feature
 2. The implementation of a new one
+3. A few theoretical questions
 
 For the **first task** have a look at the already existing resource list (which should open automatically after starting the
 server) and to the code behind it. Try to find problems in the current implementation and note them as part
@@ -49,6 +50,8 @@ On the "details page" the same information should be visible as on the resource 
 along with all the names of the contributors, the description and a simple listing of all the tags (which includes 
 categories, tags and topics). How you arrange the page and how you present these values is up to you (and it doesn't really 
 matter as long as the layout is clean and simple).
+
+For the **third task** please answer the questions listed at the bottom of this document and write them in a text file called `answers.txt` in the projects root directory. We only need textual answers here, no coding is needed.
 
 `Notice`: you may find in code the term _material_. It's the same thing as _resource_.
 
@@ -91,3 +94,31 @@ These commands do the following:
 
 In this example the file `0001-Solution.patch` would be the file to attach to your
 email.
+
+
+## Theoretical Questions
+
+**Question 1**: We want to introduce a new endpoint to the API to fetch the 
+user entity of the author of a book (with the fields `id` and `name`). If
+you consider the common best practices for designing RESTful APIs, how would the 
+URL for this endpoint look like?
+
+**Question 2**: If we want to introduce versioning for the API, how 
+would the URLs of the calls change?
+Please modify the URLs of the following endpoints to indicate that they are
+from Version 1 of the API.  
+```
+GET /resources  
+POST /resources/54
+```
+
+**Question 3**: We want our API to be highly performant and be able to handle
+many requests per second and respond quickly even in peek times of high usage.
+Please list some ideas and possible techniques for how to increase and guarantee 
+a high performance of the API.
+
+**Question 4**: We want to make the API publicly accessible, e.g. so that 
+partners or other users can use it within their own websites or applications.
+We want to be able to restrict the access to the API to certain users and be 
+able to track usage statistics like who sent how many requests per day.
+Please describe a possible solution for how we can achieve this goal.
