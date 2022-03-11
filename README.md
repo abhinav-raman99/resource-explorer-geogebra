@@ -2,8 +2,6 @@
 
 This is a small evaluation project that helps us determine the programming skills and style of applicants. It also serves as an example of what might await you at our company.
 
-Although this is a front-end task, the actual work will consist of back-end implementation as well. Please answer the theoretical questions about API-design at the bottom!
-
 ## Requirements
 
 In order to get the source files, you'll need [Git](https://git.io/). Other then that, basically a new version of [Node](https://nodejs.org) and an up-to-date web browser.
@@ -45,7 +43,7 @@ have to find all the little problems as, again, these tasks are more about **how
 For the **second task** please implement a "details page" that shows information about a specific resource. This page should
 be available at the `/details/{id}` route and should be based on the `GET /materials/{id}` method of the API. 
 An example of this call is: [https://api.geogebra.org/v1.0/materials/p8r4x6zf?scope=extended&embed=tags,contributors](https://api.geogebra.org/v1.0/materials/p8r4x6zf?scope=extended&embed=tags,contributors), 
-but please see our [API's documentation](https://groot.geogebra.org:555/?url=https://api.geogebra.org/v1.0/openapi) for details.
+but please see our [API's documentation](https://petstore.swagger.io/?url=https://api.geogebra.org/v1.0/openapi) for details.
 On the "details page" the same information should be visible as on the resource list (thumbnail, type, name of author and creation date), 
 along with all the names of the contributors, the description and a simple listing of all the tags (which includes 
 categories, tags and topics). How you arrange the page and how you present these values is up to you (and it doesn't really 
@@ -98,27 +96,6 @@ email.
 
 ## Theoretical Questions
 
-**Question 1**: We want to introduce a new endpoint to the API to fetch the 
-user entity of the author of a book (with the fields `id` and `name`). If
-you consider the common best practices for designing RESTful APIs, how would the 
-URL for this endpoint look like?
+**Question 1**: You have to pass some information deep down the component tree (let's say, 5 components deep). How would you do that?
 
-**Question 2**: If we want to introduce versioning for the API, how 
-would the URLs of the calls change?
-Please modify the URLs of the following endpoints to indicate that they are
-from Version 1 of the API.  
-```
-GET /resources  
-POST /resources/54
-```
-
-**Question 3**: We want our API to be highly performant and be able to handle
-many requests per second and respond quickly even in peek times of high usage.
-Please list some ideas and possible techniques for how to increase and guarantee 
-a high performance of the API.
-
-**Question 4**: We want to make the API publicly accessible, e.g. so that 
-partners or other users can use it within their own websites or applications.
-We want to be able to restrict the access to the API to certain users and be 
-able to track usage statistics like who sent how many requests per day.
-Please describe a possible solution for how we can achieve this goal.
+**Question 2**: There is a `useEffect` hook that uses many external variables. Write a few pros and cons for listing all of those variables in the dependency list (there's no good or bad answer here, just talk about your thinking).
