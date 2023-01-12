@@ -15,7 +15,7 @@ export default function NotifyingLoader(props) {
     };
   }, [props.onEnterViewport]);
 
-  return <div ref={elementRef}>Loading...</div>;
+  return <div ref={elementRef} className="tc f3">Loading...</div>;
 }
 NotifyingLoader.propTypes = {
   onEnterViewport: PropTypes.func.isRequired,
