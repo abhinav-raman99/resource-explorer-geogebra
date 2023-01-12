@@ -1,12 +1,10 @@
-import React from 'react';
-import Header from '../components/Header';
-import { MaterialList } from '../components/MaterialList';
+import React from "react";
+import { MaterialList } from "../components/MaterialList";
 
 export default function ListView() {
-  return (
-    <>
-      <Header />
-      <MaterialList />
-    </>
-  );
+   return (
+      <>
+         <MaterialList />
+      </>
+   );
 }

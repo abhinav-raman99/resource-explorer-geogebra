@@ -37,7 +37,7 @@ MaterialCard.propTypes = {
    }).isRequired,
 };
 
-function _dateToString(dateTime) {
+export function _dateToString(dateTime) {
    const date = new Date(dateTime * 1000);
    const intl = new Intl.DateTimeFormat("en", {
       year: "numeric",
