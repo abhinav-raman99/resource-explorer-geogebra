@@ -1,0 +1,7 @@
+Task 1:
+
+1. Folder structure: 
+   * material-card.js was placed in root directory. Implemented
+   * Extracted Header.js into separate component for better component layout.
+2. Naming scheme was not consistent. 
+   * Converted component/page name to follow PascalCase.

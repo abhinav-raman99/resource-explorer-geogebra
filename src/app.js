@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ListView from './pages/list-view';
-import NotFound from './pages/not-found';
+import ListView from './pages/ListView';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
