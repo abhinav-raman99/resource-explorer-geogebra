@@ -5,3 +5,7 @@ Task 1:
    * Extracted Header.js into separate component for better component layout.
 2. Naming scheme was not consistent. 
    * Converted component/page name to follow PascalCase.
+3. "on-intersect" as library: This project's usability depends heavily on infinite-scroll behaviour, for which we are using "on-intersect". 
+Although working well in this project, "on-intersect" is not a very well maintained library (last published 5 years ago on npmjs.com) with limited community/users (weekly downloads - 14).
+Hence, better to find an alternative for this, or implement it from scratch using native browser APIs. 
+4. Improved general UI.
