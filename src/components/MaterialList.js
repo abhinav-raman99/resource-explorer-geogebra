@@ -25,7 +25,7 @@ export function MaterialList() {
   }, []);
 
   if (!data.length) {
-    return <div>The materials are loading...</div>;
+    return <div className='mt6'>The materials are loading...</div>;
   }
 
   return (

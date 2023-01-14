@@ -6,7 +6,7 @@ export default function MaterialCard(props) {
    const { material } = props;
    return (
       <Link to={`/details/${material.id}`} className="db color-inherit">
-         <li className="db w-100 fl br4 bg-animate hover-bg-washed-red pa4">
+         <li className="db w-100 fl br4 bg-animate material-card pa4">
             <div className="dib w-20 fl">
                <img
                   src={material.thumbUrl}
