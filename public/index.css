@@ -1,11 +1,5 @@
 html {
-  background: rgb(255, 163, 246);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 163, 246, 0.2) 0%,
-    rgba(255, 110, 243, 0.3) 0%,
-    rgba(139, 0, 255, 0.1) 100%
-  );
+  background: rgb(255, 244, 253);
 }
 
 header {

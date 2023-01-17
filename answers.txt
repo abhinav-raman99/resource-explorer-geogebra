@@ -1,11 +1,52 @@
 Task 1:
 
-1. Folder structure: 
-   * material-card.js was placed in root directory. Implemented
-   * Extracted Header.js into separate component for better component layout.
-2. Naming scheme was not consistent. 
-   * Converted component/page name to follow PascalCase.
-3. "on-intersect" as library: This project's usability depends heavily on infinite-scroll behaviour, for which we are using "on-intersect". 
-Although working well in this project, "on-intersect" is not a very well maintained library (last published 5 years ago on npmjs.com) with limited community/users (weekly downloads - 14).
-Hence, better to find an alternative for this, or implement it from scratch using native browser APIs. 
-4. Improved general UI.
+   1. Folder structure: 
+      * material-card.js was placed in root directory. Corrected
+      * Extracted Header.js into separate component for better component layout.
+   2. Naming scheme was not consistent. 
+      * Converted component/page name to follow PascalCase.
+   3. "on-intersect" as library: This project's usability depends heavily on infinite-scroll behaviour, for which we are using "on-intersect". 
+      Although working well in this project, "on-intersect" is not a very well maintained library (last published 5 years ago on npmjs.com) 
+      with limited community/users (weekly downloads - 14).
+      Hence, better to find an alternative for this, or implement it from scratch using native browser APIs. 
+   4. Improved general UI.
+
+Task 2:
+
+   Implemented in branch -> "tasks"
+
+Task 3:
+
+   1. You have to pass some information deep down the component tree (let's say, 5 components deep). How would you do that?
+   >  Few options to implement this
+      a. Using React.useState -> If the information is only relevant to this component subtree and this subtree does not repeat anywhere else in the application,
+         this is an easy/straight-forward option.
+         Pros: easy to implement
+         Cons: more # lines of code, should be done only when necessary, quickly makes code unmaintainable
+
+      b. Using React.useContext -> If the information is relevant to more than one subtree (common state), this would be a better option than useState.
+         Pros: better code structure, more maintainable, more scalable
+         Cons: more hardware intensive than useState (more bigger impact on performance), bigger code overhead
+      
+      c. Using custom hooks -> just like inbuilt react hooks (useState, useContext), we make a custom hook to store this information
+         and use it only in parent and the child that requires this information
+         Pros: better code structure, more maintainable, more scalable, good practice
+         Cons: Overusing custom hooks can impact performance, bigger code overhead
+      
+      We can choose any of these option depending on the state of application.
+
+   2. There is a useEffect hook that uses many external variables. Write a few pros and cons for listing all of those variables in the dependency list 
+      (there's no good or bad answer here, just talk about your thinking).
+   >  Pros:
+      a. It is good practice to follow React linter suggestions as to which variables to put inside the useEffect dependency array.
+      b. Highly customisable output if correct variables are listed in dependency array.
+      
+      Cons: 
+      a. "effect" being triggered twice is a very common and well knwon issue in React community. Alot of times, its because of
+         presence of some variable in dependency array that shouldn't be there. 
+      b. From architectural prespective, useEffect is made for "side effects". If it is requiring a lot of variables in dependency array, 
+         than there's usually a better solution for it.
+      c. Big dependency list leads to unpredictable triggering of effect.
+      d. It is harder to maintain, debug and scale.
+
+

@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
    return (
-      <div className="w-100 mw8 center pa3 sans-serif">
+      <div className="w-100 mw8 center sans-serif">
          <Header />
          <BrowserRouter>
             <Switch>

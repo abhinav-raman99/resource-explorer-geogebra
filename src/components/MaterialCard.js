@@ -11,7 +11,7 @@ export default function MaterialCard(props) {
                <img
                   src={material.thumbUrl}
                   alt="Thumbnail of resource"
-                  className="w-100 br4"
+                  className="h-100 br4"
                />
             </div>
             <div className="dib w-80 fl pl4 h-100">
